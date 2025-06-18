@@ -2,7 +2,8 @@
 {% load django_bootstrap5 %}
 {% block content %}
 
-<form action="{% url 'teacher.create' %}" method="post" class="form">
+<section class="container p-5 mt-4">
+    <form action="{% url 'teacher.create' %}" method="post" class="form">
     {% csrf_token %}
 
     {% bootstrap_form form %}
@@ -10,6 +11,6 @@
     {% bootstrap_button button_type="submit" content="OK" %}
     {% bootstrap_button button_type="reset" content="Cancel" %}
 </form>
+</section>
 
 {% endblock %}
-gi
